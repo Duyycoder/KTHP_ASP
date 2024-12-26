@@ -1,0 +1,59 @@
+﻿@model IEnumerable<KTHP.Models.Nhanvien>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Phongban.tenphong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hotennv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tuoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.diachi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.luongnv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.matkhau)
+            </th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var nv in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => nv.Phongban.tenphong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => nv.hotennv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => nv.tuoi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => nv.diachi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => nv.luongnv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => nv.matkhau)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = nv.manv }) |
+                    @Html.ActionLink("Details", "Details", new { id = nv.manv }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = nv.manv })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+﻿@model KTHP.Models.Nhanvien
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<h2>Login</h2>
+@using (Html.BeginForm("LoginProcess", "NhanViens", FormMethod.Post))
+{
+
+    <div>
+        @Html.LabelFor(model => model.manv)
+        @Html.EditorFor(model => model.manv)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.matkhau)
+        @Html.EditorFor(model => model.matkhau)
+    </div>
+    <input type="submit" value="Đăng nhập" />
+
+}
